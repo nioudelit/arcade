@@ -2,6 +2,7 @@
 //Un personnage se promène
 
 Personnage avatar;
+Maison maison;
 
 int taille = 20;
 int curseur;
@@ -14,14 +15,18 @@ void settings(){
 
 void setup(){
   avatar = new Personnage("chevalier");
-  frameRate(10);
+  maison = new Maison("the");
+  frameRate(20);
 }
 
 void draw(){
   background(255);
+  maison.afficher(5, 5, 10, 10);
+  
   avatar.afficher();
   avatar.deplacer();
-  //grille();
+  
+  grille();
 }
 
 void grille(){
