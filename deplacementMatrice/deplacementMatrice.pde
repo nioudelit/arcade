@@ -22,6 +22,7 @@ void setup(){
 void draw(){
   background(255);
   maison.afficher(5, 5, 10, 10);
+  maison.penetre();
   
   avatar.afficher();
   avatar.deplacer();

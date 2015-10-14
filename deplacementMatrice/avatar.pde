@@ -15,6 +15,14 @@ class Personnage{
     image(animation[curseurAnimation], posX, posY, taille * 4, taille * 4);
   }
   
+  int X(){
+    return posX;
+  }
+  
+  int Y(){
+    return posY;
+  }
+  
   void deplacer(){
     if(keyPressed){
       if(keyCode == UP){
