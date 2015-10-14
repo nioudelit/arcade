@@ -12,7 +12,9 @@ class Personnage{
   
   void afficher(){
     curseurAnimation = curseur;
+    fill(255, 0, 0);
     image(animation[curseurAnimation], posX, posY, taille * 4, taille * 4);
+    ellipse(posX + taille / 2, posY + taille / 2, taille, taille);
   }
   
   int X(){
