@@ -4,6 +4,9 @@ class Maison{
   int yy;
   int ll;
   int hh;
+  
+  boolean in;
+  
   PImage dessin;
   
   Maison(String nomMaison){
@@ -22,12 +25,18 @@ class Maison{
   }
   
   void penetre(){
-    if(avatar.X() > xx * taille && avatar.X() < xx * taille + ll * taille
-    && avatar.Y() > yy * taille && avatar.Y() < yy * taille + ll * taille){
+    if(avatar.X() >= xx * taille && avatar.X() <= xx * taille + ll * taille
+    && avatar.Y() >= yy * taille && avatar.Y() <= yy * taille + ll * taille){
       println("TOUCHE MAISON");
+      in = true;
     } else {
       println("PAS DEDANS");
+      in = false;
     }
-    
+  }
+  void evenement(){
+    if(in){    
+      image(test, 0, 0);
+    }
   }
 }

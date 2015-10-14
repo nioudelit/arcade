@@ -4,28 +4,33 @@
 Personnage avatar;
 Maison maison;
 
-int taille = 20;
+int taille = 40;
 int curseur;
 
+PImage test;
+
 void settings(){
-  //fullScreen(P2D);
-  size(500, 500, P2D);
+  fullScreen(P2D);
+  //size(500, 500, P2D);
 }
 
 void setup(){
   avatar = new Personnage("chevalier");
   maison = new Maison("the");
+  test = loadImage("ingrat.jpg");
   frameRate(10);
 }
 
 void draw(){
   background(255);
-  maison.afficher(5, 5, 5, 5);
+  
+  maison.afficher(5, 5, 9, 9);
   maison.penetre();
   
   avatar.afficher();
   avatar.deplacer();
   
+  maison.evenement();
   grille();
 }
 
