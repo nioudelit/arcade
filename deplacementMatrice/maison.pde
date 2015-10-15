@@ -6,6 +6,7 @@ class Maison{
   int hh;
   
   boolean in;
+  boolean inv = false;
   
   PImage dessin;
   
@@ -25,8 +26,9 @@ class Maison{
   }
   
   void penetre(){
-    if(avatar.X() >= xx * taille && avatar.X() <= xx * taille + ll * taille
-    && avatar.Y() >= yy * taille && avatar.Y() <= yy * taille + ll * taille){
+    //remplacer [0] par [i] (boucle)
+    if(avatar[0].X() >= xx * taille && avatar[0].X() <= xx * taille + ll * taille
+    && avatar[0].Y() >= yy * taille && avatar[0].Y() <= yy * taille + ll * taille){
       println("TOUCHE MAISON");
       in = true;
     } else {
@@ -35,7 +37,7 @@ class Maison{
     }
   }
   void evenement(){
-    if(in){    
+    if(in){
       image(test, 0, 0);
     }
   }

@@ -3,6 +3,7 @@ class Personnage{
   PImage[] animation = new PImage[4];
   int curseurAnimation;
   int posX, posY;
+  boolean col = false;
   
   Personnage(String imgAvatar){
     for(int i = 0; i < animation.length; i++){
@@ -10,38 +11,44 @@ class Personnage{
     }
   }
   
-  void afficher(){
+  void afficher(int x, int y){
     curseurAnimation = curseur;
     fill(255, 0, 0);
-    image(animation[curseurAnimation], posX, posY, taille * 4, taille * 4);
-    ellipse(posX + taille / 2, posY + taille / 2, taille, taille);
+    x *= taille;
+    y *= taille;
+    image(animation[curseurAnimation], posX + x, posY + y, taille * 3, taille * 3);
+    //ellipse(posX + taille / 2, posY + taille / 2, taille, taille);
   }
   
   int X(){
-    return posX;
+    return posX + taille + taille / 2;
   }
   
   int Y(){
-    return posY;
+    return posY + taille + taille / 2;
+  }
+  
+  boolean collision(){
+    return true;
   }
   
   void deplacer(){
     if(keyPressed){
       if(keyCode == UP){
         curseur = 0;
-        posY -= taille;
+        posY -= taille / 2;
       } 
       if(keyCode == DOWN){
         curseur = 1; 
-        posY += taille;
+        posY += taille / 2;
       } 
       if(keyCode == LEFT){
         curseur = 2;
-        posX-= taille;
+        posX-= taille / 2;
       }
       if(keyCode == RIGHT){
         curseur = 3;
-        posX += taille;
+        posX += taille / 2;
       }
     }
   }

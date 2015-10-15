@@ -1,41 +1,60 @@
 //TEST 000
 //Un personnage se promène
-//A Faire : collision maison (porte)
-//Colision personnage
-//Changement écran
-//fondu au noir lorsqu'on entre ou attaque monstre
 
-Personnage avatar;
-Maison maison;
+//ANIMATION
+//COLLISION
+//PATTERNS MOUVEMENT PNG (CLASSE PNG?)
+//CHANGEMENT écran
+
+Personnage[] avatar = new Personnage[2];
+Maison[] maison = new Maison[3];
 
 int taille = 40;
 int curseur;
+int opacite = 0;
 
-PImage test;
+PImage test;// faire classe cinématiques
+PImage herbe;
 
 void settings(){
   fullScreen(P2D);
-  //size(500, 500, P2D);
+  //size(600, 600, P2D);
 }
 
 void setup(){
-  avatar = new Personnage("chevalier");
-  maison = new Maison("the");
+  avatar[0] = new Personnage("chevalier");
+  avatar[1] = new Personnage("baleze");
+  
+  maison[0] = new Maison("the");
+  maison[1] = new Maison("superarbre");
+  maison[2] = new Maison("superarbre");
+  
   test = loadImage("ingrat.jpg");
-  frameRate(10);
+  herbe = loadImage("herbe.jpg");
+  frameRate(12);
 }
 
 void draw(){
   background(255);
+  pushStyle();
+  tint(200, 200, 5, 120);
+  image(herbe, 0, 0, width, height);
+  popStyle();
   
-  maison.afficher(5, 5, 9, 9);
-  maison.penetre();
+  maison[0].afficher(5, 5, 6, 6);
+  maison[0].penetre();
+  maison[1].afficher(25, 7, 7, 7);
+  maison[2].afficher(17, 12, 5, 5);
+  maison[2].afficher(15, 5, 4, 4);
   
-  avatar.afficher();
-  avatar.deplacer();
+  avatar[1].afficher(23, 9);
+  avatar[0].afficher(0, 0);
+  avatar[0].deplacer();
   
-  maison.evenement();
+  maison[0].evenement();
   grille();
+  println(opacite);
+  //fondu();
 }
 
 void grille(){
