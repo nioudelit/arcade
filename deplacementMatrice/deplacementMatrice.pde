@@ -1,5 +1,9 @@
 //TEST 000
 //Un personnage se promène
+//A Faire : collision maison (porte)
+//Colision personnage
+//Changement écran
+//fondu au noir lorsqu'on entre ou attaque monstre
 
 Personnage avatar;
 Maison maison;
