@@ -36,10 +36,10 @@ void setup(){
 
 void draw(){
   background(255);
-  pushStyle();
-  tint(200, 200, 5, 120);
-  image(herbe, 0, 0, width, height);
-  popStyle();
+  //pushStyle();
+  //tint(200, 200, 5, 120);
+  //image(herbe, 0, 0, width, height);
+  //popStyle();
   
   maison[0].afficher(5, 5, 6, 6);
   maison[0].penetre();
