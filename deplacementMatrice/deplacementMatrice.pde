@@ -12,6 +12,7 @@ Maison[] maison = new Maison[3];
 int taille = 40;
 int curseur;
 int opacite = 0;
+int q, s;
 
 PImage test;// faire classe cinématiques
 PImage herbe;
@@ -40,21 +41,7 @@ void draw(){
   //tint(200, 200, 5, 120);
   //image(herbe, 0, 0, width, height);
   //popStyle();
-  
-  maison[0].afficher(5, 5, 6, 6);
-  maison[0].penetre();
-  maison[1].afficher(25, 7, 7, 7);
-  maison[2].afficher(17, 12, 5, 5);
-  maison[2].afficher(15, 5, 4, 4);
-  
-  avatar[1].afficher(23, 9);
-  avatar[0].afficher(0, 0);
-  avatar[0].deplacer();
-  
-  maison[0].evenement();
-  grille();
-  println(opacite);
-  //fondu();
+  ecran001();
 }
 
 void grille(){
@@ -64,5 +51,31 @@ void grille(){
   }
   for(int i = 0; i < height; i++){
     line(0, i * taille, width, i * taille);
+  }
+}
+
+void acc(){
+}
+
+void ecran001(){
+  pushMatrix();
+  translate(q, s);
+  maison[0].afficher(5, 5, 6, 6);
+  maison[0].penetre();
+  maison[1].afficher(25, 7, 7, 7);
+  maison[2].afficher(17, 12, 5, 5);
+  maison[2].afficher(15, 5, 4, 4);
+  popMatrix();
+  
+  avatar[1].afficher(23, 9);
+  avatar[0].afficher(width/2 / taille, height/2 / taille);
+  avatar[0].deplacer();
+  
+  maison[0].evenement();
+  grille();
+  
+  if(avatar[0].X() < 0){
+    //ecran002();
+    //q = taille;
   }
 }

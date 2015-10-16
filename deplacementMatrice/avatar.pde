@@ -36,11 +36,11 @@ class Personnage{
     if(keyPressed){
       if(keyCode == UP){
         curseur = 0;
-        posY -= taille / 2;
+        s += taille / 2;
       } 
       if(keyCode == DOWN){
         curseur = 1; 
-        posY += taille / 2;
+        s -= taille / 2;
       } 
       if(keyCode == LEFT){
         curseur = 2;
