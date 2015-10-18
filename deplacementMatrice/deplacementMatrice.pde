@@ -67,7 +67,9 @@ void ecran001(){
   maison[0].afficher(5, 5, 6, 6);
   maison[0].penetre();
   maison[0].collision();
-  
+  //maison[0].verifcollision();
+  maison[1].collision();
+  //maison[1].verifcollision();
   //PNG
   avatar[1].afficher(23, 9);
   
@@ -79,7 +81,7 @@ void ecran001(){
   maison[1].afficher(25, 7, 7, 7);
   maison[1].afficher(17, 12, 5, 5);
   maison[1].afficher(15, 5, 4, 4);
-  maison[1].collision();
+  
   
   //ACTION MAISON
   maison[0].evenement();
