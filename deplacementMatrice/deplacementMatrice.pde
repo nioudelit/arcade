@@ -23,8 +23,8 @@ PImage test;// faire classe cinématiques
 PImage herbe;
 
 void settings(){
-  //fullScreen(P2D);
-  size(800, 600, P2D);
+  fullScreen(P2D);
+  //size(800, 600, P2D);
 }
 
 void setup(){
