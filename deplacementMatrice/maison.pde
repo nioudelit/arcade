@@ -23,17 +23,31 @@ class Maison{
   }
   
   void collision(){
+    if(avatar[0].X() > xx * taille - taille && avatar[0].X() <= xx * taille + ll * taille
+    && avatar[0].Y() >= yy * taille && avatar[0].Y() <= yy * taille + ll * taille){
+      println("touche");
+      if(directions[0] == directions[1]){
+        collision = 0;
+      } else if (directions[0] != directions[1]){
+        collision = 1;
+      }
+    } else {
+      collision = 1;
+      println("pas touche");
+    }
   }
   
   void penetre(){
     //remplacer [0] par [i] (boucle)
     if(avatar[0].X() >= xx * taille && avatar[0].X() <= xx * taille + ll * taille
     && avatar[0].Y() >= yy * taille && avatar[0].Y() <= yy * taille + ll * taille){
-      println("TOUCHE MAISON");
+      //println("TOUCHE MAISON");
       in = true;
+      //collision = 0;
     } else {
-      println("PAS DEDANS");
+      //println("PAS DEDANS");
       in = false;
+      //collision = 1;
     }
   }
   void evenement(){

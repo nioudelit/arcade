@@ -55,6 +55,8 @@ conception (le public pensé)
 penser l'œuvre (prend forme)
 reception œuvre
 
+interaction des médias entre eux
+
 support 
 temps réel
 

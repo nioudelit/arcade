@@ -12,14 +12,19 @@ Maison[] maison = new Maison[3];
 int taille = 40;
 int curseur;
 int opacite = 0;
-int q, s;
+
+//gestion collision
+//Permet de vérifier direct° du perso
+int[] directions = new int[2];
+int curseurDir;
+int collision = 1;
 
 PImage test;// faire classe cinématiques
 PImage herbe;
 
 void settings(){
-  fullScreen(P2D);
-  //size(600, 600, P2D);
+  //fullScreen(P2D);
+  size(800, 600, P2D);
 }
 
 void setup(){
@@ -28,7 +33,6 @@ void setup(){
   
   maison[0] = new Maison("the");
   maison[1] = new Maison("superarbre");
-  maison[2] = new Maison("superarbre");
   
   test = loadImage("ingrat.jpg");
   herbe = loadImage("herbe.jpg");
@@ -58,24 +62,38 @@ void acc(){
 }
 
 void ecran001(){
-  pushMatrix();
-  translate(q, s);
+  
+  //MAISON
   maison[0].afficher(5, 5, 6, 6);
   maison[0].penetre();
-  maison[1].afficher(25, 7, 7, 7);
-  maison[2].afficher(17, 12, 5, 5);
-  maison[2].afficher(15, 5, 4, 4);
-  popMatrix();
+  maison[0].collision();
   
+  //PNG
   avatar[1].afficher(23, 9);
-  avatar[0].afficher(width/2 / taille, height/2 / taille);
+  
+  //PERSONNAGE
+  avatar[0].afficher(0, 0);
   avatar[0].deplacer();
   
+  //ARBRES
+  maison[1].afficher(25, 7, 7, 7);
+  maison[1].afficher(17, 12, 5, 5);
+  maison[1].afficher(15, 5, 4, 4);
+  maison[1].collision();
+  
+  //ACTION MAISON
   maison[0].evenement();
+  
+  //GRILLE
   grille();
   
+  //CHANGEMENT ECRAN
   if(avatar[0].X() < 0){
-    //ecran002();
+    ecran002();
     //q = taille;
   }
+}
+
+void ecran002(){
+  background(0);
 }
