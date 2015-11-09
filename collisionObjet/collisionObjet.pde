@@ -1,11 +1,15 @@
+
+//1440 * 900
+//60 t. Pour 24 * 15
+
 Element maison;
 Personnage chCh;
 
 //GRILLE****MATRICE***COLLISION
-int col = 10;
-int ligne = 10;
-int HAUTEUR = 10;
-int LONGUEUR = 10;
+int col = 24;
+int ligne = 15;
+int HAUTEUR = ligne;
+int LONGUEUR = col;
 
 char[][] grille = new char[col][ligne];
 String[] niveau;
@@ -23,7 +27,8 @@ int[] directions = new int[2];
 int curseurDir;
 
 void setup(){
-  size(600, 600, P2D);
+  //size(600, 600, P2D);
+  fullScreen(P2D, 1);
   frameRate(10);
   //noStroke();
   
@@ -45,11 +50,11 @@ void setup(){
 
 void draw(){
   background(255);
-  renduGraphiqueGrille();
+  //renduGraphiqueGrille();
   
+  maison.afficher(3, 3, 3, 3);
   chCh.afficher(posX, posY);
   chCh.deplacer();
-  maison.afficher(3, 3, 3, 3);
 }
 
 void renduGraphiqueGrille(){
@@ -67,5 +72,5 @@ void renduGraphiqueGrille(){
     }
   }
   fill(255, 0, 0);
-  //rect(posX * t, posY * t, t, t); 
+  rect(posX * t, posY * t, t, t); 
 }

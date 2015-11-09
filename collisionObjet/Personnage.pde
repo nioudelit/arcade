@@ -15,7 +15,7 @@ class Personnage{
     fill(255, 0, 0);
     x *= t;
     y *= t;
-    image(animation[curseurAnimation], posX + x, posY + y, t, t);
+    image(animation[curseurAnimation], posX + x, posY + y - t, t*2, t*2 );
   }
   
   void deplacer(){
