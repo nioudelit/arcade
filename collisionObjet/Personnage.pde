@@ -20,7 +20,6 @@ class Personnage{
   
   void deplacer(){
     if(keyPressed){
-      
       //VERIF DIRECTION
       curseurDir += 1;
       if(curseurDir > 1){
@@ -30,19 +29,35 @@ class Personnage{
       
       if(keyCode == UP){
         curseur = 0;
-        //Y -= (t / 2 * collision);
+        if(posY > 0){
+          if(grille[posX][posY-1] != '1'){
+            posY -= 1;
+          }
+        }
       } 
       if(keyCode == DOWN){
         curseur = 1; 
-        //Y += (t / 2 * collision);
+        if(posY < HAUTEUR - 1){
+          if(grille[posX][posY+1] != '1'){
+            posY += 1;
+          }
+        }
       } 
       if(keyCode == LEFT){
         curseur = 2;
-        //X-= (t / 2 * collision);
+        if(posX > 0){
+          if(grille[posX-1][posY] != '1'){
+            posX -= 1;
+          }
+        }
       }
       if(keyCode == RIGHT){
         curseur = 3;
-        //X += (t / 2 * collision);
+        if( posX < LONGUEUR - 1){
+          if(grille[posX+1][posY] != '1'){
+            posX += 1;
+          }
+        }
       }
     }
   }

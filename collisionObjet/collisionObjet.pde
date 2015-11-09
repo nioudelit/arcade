@@ -4,6 +4,9 @@ Personnage chCh;
 //GRILLE****MATRICE***COLLISION
 int col = 10;
 int ligne = 10;
+int HAUTEUR = 10;
+int LONGUEUR = 10;
+
 char[][] grille = new char[col][ligne];
 String[] niveau;
 
@@ -20,9 +23,9 @@ int[] directions = new int[2];
 int curseurDir;
 
 void setup(){
-  size(600, 600);
-  frameRate(8);
-  noStroke();
+  size(600, 600, P2D);
+  frameRate(10);
+  //noStroke();
   
   //OBJETS DECO
   maison = new Element("the");
@@ -64,27 +67,5 @@ void renduGraphiqueGrille(){
     }
   }
   fill(255, 0, 0);
-  //rect(posX * t, posY * t, t, t);
-  if(keyPressed){
-    if(grille[posX+1][posY] != '1'){
-      if(keyCode == RIGHT){
-        posX += 1;
-      }
-    }
-    if(grille[posX-1][posY] != '1'){
-      if(keyCode == LEFT){
-        posX -= 1;
-      }
-    }
-    if(grille[posX][posY-1] != '1'){
-      if(keyCode == UP){
-        posY -= 1;
-      }
-    }
-    if(grille[posX][posY+1] != '1'){
-      if(keyCode == DOWN){
-        posY += 1;
-      }
-    }
-  }
+  //rect(posX * t, posY * t, t, t); 
 }
