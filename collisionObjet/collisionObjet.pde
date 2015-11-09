@@ -1,4 +1,5 @@
 Element maison;
+Personnage chCh;
 
 //GRILLE****MATRICE***COLLISION
 int col = 10;
@@ -7,19 +8,25 @@ char[][] grille = new char[col][ligne];
 String[] niveau;
 
 //VARIABLES
-int t = 40;
+int t = 60;
 
 //PERSONNAGE
-int posX = 1;
+int posX = 2;
 int posY = 2;
 char p = '2';
 
+int curseur;
+int[] directions = new int[2];
+int curseurDir;
+
 void setup(){
-  size(400, 400);
-  frameRate(15);
+  size(600, 600);
+  frameRate(8);
+  noStroke();
   
   //OBJETS DECO
   maison = new Element("the");
+  chCh = new Personnage("chevalier");
   
   //CHARGEMENT NIVEAU en TXT
   niveau = loadStrings("test.txt");
@@ -36,6 +43,9 @@ void setup(){
 void draw(){
   background(255);
   renduGraphiqueGrille();
+  
+  chCh.afficher(posX, posY);
+  chCh.deplacer();
   maison.afficher(3, 3, 3, 3);
 }
 
@@ -53,10 +63,8 @@ void renduGraphiqueGrille(){
       rect(i * t, j * t, t, t);
     }
   }
-  
-  
   fill(255, 0, 0);
-  rect(posX * t, posY * t, t, t);
+  //rect(posX * t, posY * t, t, t);
   if(keyPressed){
     if(grille[posX+1][posY] != '1'){
       if(keyCode == RIGHT){
