@@ -3,6 +3,7 @@ int ligne = 10;
 int p = 2; 
 int posX = 1; 
 int posY = 2;
+int posXB = posX+1;
 int t = 40;
 
 int[][] grille = new int[colonne][ligne];
@@ -11,7 +12,7 @@ void setup() {
   size(400, 400);
   for (int i = 0; i < colonne; i++) {
     for (int j = 0; j < ligne; j++) {
-      if ( i % 3 == 0 || j % 3 == 0) {
+      if ( i % 4 == 0 || j % 7 == 0) {
         grille[i][j] = 1;
       } else {
         grille[i][j] = 0;
@@ -19,7 +20,8 @@ void setup() {
     }
   }
   grille[posX][posY] = p;
-  frameRate(15);
+  grille[posXB][posY] = p;
+  frameRate(16);
 }
 
 void draw() {
@@ -44,6 +46,16 @@ void draw() {
     if(grille[posX-1][posY] != 1){
       if(keyCode == LEFT){
         posX -= 1;
+      }
+    }
+    if(grille[posX][posY-1] != 1){
+      if(keyCode == UP){
+        posY -= 1;
+      }
+    }
+    if(grille[posX][posY+1] != 1){
+      if(keyCode == DOWN){
+        posY += 1;
       }
     }
   }
