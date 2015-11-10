@@ -5,6 +5,11 @@
 Element maison;
 Personnage chCh;
 
+//BROUILLARD
+PImage fond;
+PImage[] brouillard = new PImage[3];
+int C;
+
 //GRILLE****MATRICE***COLLISION
 int col = 24;
 int ligne = 15;
@@ -31,6 +36,10 @@ void setup(){
   fullScreen(P2D, 1);
   frameRate(10);
   //noStroke();
+  fond = loadImage("fondJeu.jpg");
+  for(int i = 0; i < brouillard.length; i++){
+    brouillard[i] = loadImage("fog" + i + ".jpg");
+  }
   
   //OBJETS DECO
   maison = new Element("the");
@@ -49,12 +58,15 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  image(fond, 0, 0);
   //renduGraphiqueGrille();
   
   maison.afficher(3, 3, 3, 3);
+  maison.afficher(15, 10, 3, 3);
   chCh.afficher(posX, posY);
   chCh.deplacer();
+  
+  brouillard();
 }
 
 void renduGraphiqueGrille(){
@@ -73,4 +85,24 @@ void renduGraphiqueGrille(){
   }
   fill(255, 0, 0);
   rect(posX * t, posY * t, t, t); 
+}
+
+void bruit(int quantite){
+  for(int i = 0; i < quantite; i++){
+    stroke(0, 127);
+    point(random(width), random(height));
+  }
+}
+
+void brouillard(){
+  pushStyle();
+  tint(255, 60);
+  if(frameCount % 2 == 0){
+     C++;
+  }
+  if(C > 2){
+    C = 0;
+  }
+  image(brouillard[C], 0, 0, width, height);
+  popStyle();
 }
