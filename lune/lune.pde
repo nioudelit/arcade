@@ -2,6 +2,7 @@
 //1440 * 900
 //60 t. Pour 24 * 15
 Personnage chCh;
+Element arbre;
 
 //BROUILLARD
 PImage fond;
@@ -47,6 +48,7 @@ void setup(){
   
   //OBJETS DECO
   chCh = new Personnage("chevalier");
+  arbre = new Element("superarbre");
   
   //CHARGEMENT NIVEAU en TXT
   niveau = loadStrings("test.txt");
@@ -65,6 +67,7 @@ void draw(){
   //renduGraphiqueGrille();
   fill(0);
   rect(0, 0, width, 9 * t);
+  arbre.afficher(3, 6, 3, 3);
   fill(255);
   ellipse(width - 200, 100, 100, 100);
   chCh.afficher(posX, posY);
