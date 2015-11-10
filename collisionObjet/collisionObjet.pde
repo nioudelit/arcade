@@ -3,10 +3,13 @@
 //60 t. Pour 24 * 15
 
 Element maison;
+Element arbre;
 Personnage chCh;
 
 //BROUILLARD
 PImage fond;
+PImage nuage;
+float nuageX;
 PImage[] brouillard = new PImage[3];
 int C;
 
@@ -33,16 +36,20 @@ int curseurDir;
 
 void setup(){
   //size(600, 600, P2D);
-  fullScreen(P2D, 1);
+  fullScreen(P2D, 2);
   frameRate(10);
   //noStroke();
+  noCursor();
+  
   fond = loadImage("fondJeu.jpg");
+  nuage = loadImage("nuage.png");
   for(int i = 0; i < brouillard.length; i++){
     brouillard[i] = loadImage("fog" + i + ".jpg");
   }
   
   //OBJETS DECO
   maison = new Element("the");
+  arbre = new Element("superarbre");
   chCh = new Personnage("chevalier");
   
   //CHARGEMENT NIVEAU en TXT
@@ -63,10 +70,13 @@ void draw(){
   
   maison.afficher(3, 3, 3, 3);
   maison.afficher(15, 10, 3, 3);
+  arbre.afficher(12, 7, 3, 3);
+  arbre.afficher(14, 5, 3, 3);
+  arbre.afficher(16, 4, 3, 3);
   chCh.afficher(posX, posY);
   chCh.deplacer();
-  
-  brouillard();
+
+  brouillard();//PEU EFFICIENT ! MODIFIER CE TEST ABSOLUMENT!
 }
 
 void renduGraphiqueGrille(){
@@ -96,13 +106,26 @@ void bruit(int quantite){
 
 void brouillard(){
   pushStyle();
-  tint(255, 60);
+  tint(255, 110);
   if(frameCount % 2 == 0){
      C++;
   }
   if(C > 2){
     C = 0;
   }
+  nuageX += 0.5;
+  image(nuage, nuageX - 100, 0, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX , 100, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX * 1.5 + 120, 69, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX + 180, 74, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX + 300, 100);
+  image(nuage, nuageX - 100, 400, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX ,460, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX + width/2, 400);
+  image(nuage, nuageX * 1.5 + 590, 69, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX + 180, 640, nuage.width/2, nuage.height/2);
+  image(nuage, nuageX + 300, 690);
+  tint(255, 45);
   image(brouillard[C], 0, 0, width, height);
   popStyle();
 }
