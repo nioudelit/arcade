@@ -6,6 +6,15 @@ Projet d'installation vidéo-interactive sous forme de borne d'arcade
 ![GitHub Logo](captures/brouillard.png)
 ![GitHub Logo](captures/lune.png)
 
+#Hein?
+Cheval et Chevalier est une installation vidéo-graphique, narrative et interactive (un jeu vidéo quoi).
+Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher la raison pour laquelle d'ou vient le mystérieux brouillard (ça leur permettra de faire une traditionnelle quête après tout). Mais petit à petit, le monde semble se métamorphoser, comme si il s'évanouissait…
+
+##1. Le monde virtuel apparait.
+##2. Le monde virtuel est incohérent.
+##3. Le monde virtuel dévoré progressivement par des éléments du réel qui viennent s'y greffer.
+
+
 ## NOTES à ma propre attention
 "Borne to Burn" (nom non-defititif) est un projet d'installation vidéo-interactive.
 ludique immersive et merveilleuse. 
