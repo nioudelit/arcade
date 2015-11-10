@@ -5,16 +5,17 @@ Installation vidéographique interactive.
 ![GitHub Logo](captures/lune.png)
 
 #Hein?
-Cheval et Chevalier est une installation vidéo-graphique, narrative et interactive (un jeu vidéo quoi).
+Cheval et Chevalier est une installation vidéo-graphique, narrative et interactive (un jeu vidéo quoi). Voici l'histoire:
 Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher d'ou vient ce mystérieux brouillard (ça leur permettra de faire une traditionnelle quête après tout). Mais petit à petit, le monde semble se métamorphoser, comme si il s'évanouissait…
 
 ![GitHub Logo](https://github.com/nioudelit/arcade/blob/master/deplacementMatrice/data/capture.png?raw=true)
 ![GitHub Logo](captures/brouillard.png)
 
 ##1. Le monde virtuel apparait.
-##2. Le monde virtuel est incohérent.
-##3. Le monde virtuel dévoré progressivement par des éléments du réel qui viennent s'y greffer.
-##4. Sortie (ou non) du virtuel, par la destruction de sa propre figure (celle du joueur) représentée dans le jeu.
+##2. Le monde virtuel dévoré progressivement par des éléments du réel qui viennent s'y greffer.
+##3. Sortie (ou non) du virtuel, par la destruction de sa propre figure (celle du joueur) représentée dans le jeu.
+
+**Ce projet vous est présenté par Sieur Géroux (Scénario & Graphisme) et Sieur Nioudélit(Graphisme, Programmation).**
 
 
 ## NOTES à ma propre attention
