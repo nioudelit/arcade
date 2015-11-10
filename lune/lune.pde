@@ -1,9 +1,6 @@
 
 //1440 * 900
 //60 t. Pour 24 * 15
-
-Element maison;
-Element arbre;
 Personnage chCh;
 
 //BROUILLARD
@@ -27,7 +24,7 @@ int t = 60;
 
 //PERSONNAGE
 int posX = 2;
-int posY = 2;
+int posY = 11;
 char p = '2';
 
 int curseur;
@@ -38,8 +35,9 @@ void setup(){
   //size(600, 600, P2D);
   fullScreen(P2D);
   frameRate(10);
-  //noStroke();
+  noStroke();
   noCursor();
+  smooth();
   
   fond = loadImage("fondJeu.jpg");
   nuage = loadImage("nuage.png");
@@ -48,8 +46,6 @@ void setup(){
   }
   
   //OBJETS DECO
-  maison = new Element("the");
-  arbre = new Element("superarbre");
   chCh = new Personnage("chevalier");
   
   //CHARGEMENT NIVEAU en TXT
@@ -67,12 +63,10 @@ void setup(){
 void draw(){
   image(fond, 0, 0);
   //renduGraphiqueGrille();
-  
-  maison.afficher(3, 3, 3, 3);
-  maison.afficher(15, 10, 3, 3);
-  arbre.afficher(12, 7, 3, 3);
-  arbre.afficher(14, 5, 3, 3);
-  arbre.afficher(16, 4, 3, 3);
+  fill(0);
+  rect(0, 0, width, 9 * t);
+  fill(255);
+  ellipse(width - 200, 100, 100, 100);
   chCh.afficher(posX, posY);
   chCh.deplacer();
 
