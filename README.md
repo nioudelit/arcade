@@ -15,7 +15,7 @@ Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher d'ou vient
 ##2. Le monde virtuel dévoré progressivement par des éléments du réel qui viennent s'y greffer.
 ##3. Sortie (ou non) du virtuel, par la destruction de sa propre figure (celle du joueur) représentée dans le jeu.
 
-**Ce projet vous est présenté par Sieur Géroux (Scénario & Graphisme) et Sieur Nioudélit(Graphisme, Programmation).**
+**Ce projet vous est présenté par Sieur Géroux (Scénario & Graphisme) et Sieur Nioudélit (Graphisme, Programmation).**
 
 
 ## NOTES à ma propre attention

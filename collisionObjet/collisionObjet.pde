@@ -1,6 +1,11 @@
 
 //1440 * 900
 //60 t. Pour 24 * 15
+//ACTION
+//COLLISION cheval préciser.
+//mouvement PNG
+//cases interaction
+//MOUVements plus fluides 
 
 Element maison;
 Element arbre;
@@ -25,8 +30,13 @@ String[] niveau;
 //VARIABLES
 int t = 60;
 
+//COULEURS
+color rouge = color(255, 0, 0);
+color vert = color(0, 140, 0);
+color bleu = color(0, 0, 255);
+
 //PERSONNAGE
-int posX = 2;
+int posX = 4;
 int posY = 2;
 char p = '2';
 
@@ -65,18 +75,23 @@ void setup(){
 }
 
 void draw(){
+  //translate(300, 300);
   image(fond, 0, 0);
   //renduGraphiqueGrille();
   
   maison.afficher(3, 3, 3, 3);
   maison.afficher(15, 10, 3, 3);
+  
+  chCh.afficher(posX, posY);
+  chCh.deplacer();
+  
   arbre.afficher(12, 7, 3, 3);
   arbre.afficher(14, 5, 3, 3);
   arbre.afficher(16, 4, 3, 3);
-  chCh.afficher(posX, posY);
-  chCh.deplacer();
 
   brouillard();//PEU EFFICIENT ! MODIFIER CE TEST ABSOLUMENT!
+  chCh.action();
+  //grille();
 }
 
 void renduGraphiqueGrille(){
@@ -95,13 +110,6 @@ void renduGraphiqueGrille(){
   }
   fill(255, 0, 0);
   rect(posX * t, posY * t, t, t); 
-}
-
-void bruit(int quantite){
-  for(int i = 0; i < quantite; i++){
-    stroke(0, 127);
-    point(random(width), random(height));
-  }
 }
 
 void brouillard(){
@@ -127,5 +135,19 @@ void brouillard(){
   image(nuage, nuageX + 300, 690);
   tint(255, 45);
   image(brouillard[C], 0, 0, width, height);
+  popStyle();
+}
+
+void grille(){
+  pushStyle();
+  stroke(255, 255, 0);
+  for(int i = 0; i < col; i++){
+    text(i, i * t + 10, 30);
+    line(i * t, 0, i*t, height);
+  }
+  for(int i = 0; i < ligne; i++){
+    line(0, i * t, width, i * t);
+    text(i, 10, i * t + 30);
+  }
   popStyle();
 }

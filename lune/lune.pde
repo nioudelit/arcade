@@ -76,6 +76,7 @@ void draw(){
   chCh.deplacer();
 
   brouillard();//PEU EFFICIENT ! MODIFIER CE TEST ABSOLUMENT!
+  //grille();
 }
 
 void renduGraphiqueGrille(){
@@ -96,11 +97,18 @@ void renduGraphiqueGrille(){
   rect(posX * t, posY * t, t, t); 
 }
 
-void bruit(int quantite){
-  for(int i = 0; i < quantite; i++){
-    stroke(0, 127);
-    point(random(width), random(height));
+void grille(){
+  pushStyle();
+  stroke(255, 255, 0);
+  for(int i = 0; i < col; i++){
+    text(i, i * t + 10, 30);
+    line(i * t, 0, i*t, height);
   }
+  for(int i = 0; i < ligne; i++){
+    line(0, i * t, width, i * t);
+    text(i, 10, i * t + 30);
+  }
+  popStyle();
 }
 
 void brouillard(){

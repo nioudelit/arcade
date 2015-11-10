@@ -61,4 +61,14 @@ class Personnage{
       }
     }
   }
+  
+  void action(){
+    textAlign(CENTER);
+    if(grille[posX][posY] == '3'){
+      fill(255);
+      rect(posX * t + t*2, posY*t + t, 500, 150);
+      fill(0);
+      //text("Hé, salut toi", 50,700);
+    }
+  }
 }
