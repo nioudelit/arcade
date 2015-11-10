@@ -3,6 +3,8 @@
 Projet d'installation vidéo-interactive sous forme de borne d'arcade
 
 ![GitHub Logo](https://github.com/nioudelit/arcade/blob/master/deplacementMatrice/data/capture.png?raw=true)
+![GitHub Logo](captures/brouillard.png)
+![GitHub Logo](captures/lune.png)
 
 ## NOTES à ma propre attention
 "Borne to Burn" (nom non-defititif) est un projet d'installation vidéo-interactive.

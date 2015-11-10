@@ -67,7 +67,9 @@ void draw(){
   //renduGraphiqueGrille();
   fill(0);
   rect(0, 0, width, 9 * t);
-  arbre.afficher(3, 6, 3, 3);
+  arbre.afficher(1, 6, 3, 3);
+  arbre.afficher(4, 6, 3, 3);
+  arbre.afficher(7, 6, 3, 3);
   fill(255);
   ellipse(width - 200, 100, 100, 100);
   chCh.afficher(posX, posY);
