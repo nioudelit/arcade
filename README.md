@@ -1,14 +1,15 @@
 
 #Borne to Burn (en travaux)
-Projet d'installation vidéo-interactive sous forme de borne d'arcade
+Installation vidéographique interactive.
 
-![GitHub Logo](https://github.com/nioudelit/arcade/blob/master/deplacementMatrice/data/capture.png?raw=true)
-![GitHub Logo](captures/brouillard.png)
 ![GitHub Logo](captures/lune.png)
 
 #Hein?
 Cheval et Chevalier est une installation vidéo-graphique, narrative et interactive (un jeu vidéo quoi).
-Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher la raison pour laquelle d'ou vient le mystérieux brouillard (ça leur permettra de faire une traditionnelle quête après tout). Mais petit à petit, le monde semble se métamorphoser, comme si il s'évanouissait…
+Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher d'ou vient ce mystérieux brouillard (ça leur permettra de faire une traditionnelle quête après tout). Mais petit à petit, le monde semble se métamorphoser, comme si il s'évanouissait…
+
+![GitHub Logo](https://github.com/nioudelit/arcade/blob/master/deplacementMatrice/data/capture.png?raw=true)
+![GitHub Logo](captures/brouillard.png)
 
 ##1. Le monde virtuel apparait.
 ##2. Le monde virtuel est incohérent.
