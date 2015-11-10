@@ -14,6 +14,7 @@ Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher d'ou vient
 ##1. Le monde virtuel apparait.
 ##2. Le monde virtuel est incohérent.
 ##3. Le monde virtuel dévoré progressivement par des éléments du réel qui viennent s'y greffer.
+##4. Sortie (ou non) du virtuel, par la destruction de sa propre figure (celle du joueur) représentée dans le jeu.
 
 
 ## NOTES à ma propre attention
