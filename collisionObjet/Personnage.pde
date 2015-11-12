@@ -3,6 +3,7 @@ class Personnage{
   PImage[] animation = new PImage[4];
   int curseurAnimation;
   int X, Y;
+  int correctionBas;
   
   Personnage(String imgAvatar){
     for(int i = 0; i < animation.length; i++){
@@ -15,7 +16,7 @@ class Personnage{
     fill(255, 0, 0);
     x *= t;
     y *= t;
-    image(animation[curseurAnimation], posX + x, posY + y - t, t*2, t*2 );
+    image(animation[curseurAnimation], posX + x - 15, posY + y - t + correctionBas, t * 1.5, t *1.5);
   }
   
   void deplacer(){
@@ -36,6 +37,7 @@ class Personnage{
         }
       } 
       if(keyCode == DOWN){
+        correctionBas = 30;
         curseur = 1; 
         if(posY < HAUTEUR - 1){
           if(grille[posX][posY+1] != '1'){
@@ -66,7 +68,7 @@ class Personnage{
     textAlign(CENTER);
     if(grille[posX][posY] == '3'){
       fill(255);
-      rect(posX * t + t*2, posY*t + t, 500, 150);
+      rect(posX * t + t*2, posY *t + t, 500, 150);
       fill(0);
       //text("Hé, salut toi", 50,700);
     }
