@@ -44,9 +44,7 @@ class Personnage{
             posY += 1;
           }
         }
-      }else{
-         correctionBas = 0;
-      }
+      } 
       if(keyCode == LEFT){
         curseur = 2;
         if(posX > 0){

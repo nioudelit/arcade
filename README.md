@@ -11,6 +11,13 @@ Arrivés dans un monde embrumé, Cheval et Chevalier doivent chercher d'ou vient
 ![GitHub Logo](https://github.com/nioudelit/arcade/blob/master/deplacementMatrice/data/capture.png?raw=true)
 ![GitHub Logo](captures/brouillard.png)
 
+
+### EN priorité
+• Introduction (voix + animation).
+• Tests Son Sampler auto
+• Test Visage de la Fin
+
+
 ##1. Le monde virtuel apparait.
 ##2. Le monde virtuel dévoré progressivement par des éléments du réel qui viennent s'y greffer.
 ##3. Sortie (ou non) du virtuel, par la destruction de sa propre figure (celle du joueur) représentée dans le jeu.

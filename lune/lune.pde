@@ -34,7 +34,7 @@ int curseurDir;
 
 void setup(){
   //size(600, 600, P2D);
-  fullScreen(P2D);
+  fullScreen(P2D, 1);
   frameRate(10);
   noStroke();
   noCursor();

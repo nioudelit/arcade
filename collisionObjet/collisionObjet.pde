@@ -80,14 +80,14 @@ void setup(){
 
 void draw(){
   //translate(300, 300);
-  TEST-=0.7;
+  TEST-=2;
   image(fond, 0, 0);
   renduGraphiqueGrille();
   
-  maison.afficher(3, 3, 3, 3);
-  arbre.afficher(12, 7, 3, 3);
-  arbre.afficher(14, 5, 3, 3);
-  arbre.afficher(16, 4, 3, 3);
+  maison.afficher(3, 3, 2, 2);
+  arbre.afficher(12, 7, 2, 2);
+  arbre.afficher(14, 5, 2, 2);
+  arbre.afficher(16, 4, 2, 2);
   
   
   chCh.afficher(posX, posY);
@@ -97,9 +97,6 @@ void draw(){
   brouillard();//PEU EFFICIENT ! MODIFIER CE TEST ABSOLUMENT!
   chCh.action();
   grille();
-  if(TEST == - 100){
-    println(millis()/1000);
-  }
 }
 
 void renduGraphiqueGrille(){
